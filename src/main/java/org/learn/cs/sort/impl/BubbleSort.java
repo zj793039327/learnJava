@@ -23,14 +23,15 @@ public class BubbleSort extends SortBase implements ISort {
         int[] myData = Arrays.copyOf(data, data.length);
 
         for (int i = myData.length - 1; i >= 0; i--) {
-            log.info(i + "");
+            //            log.info(i + "");
             for (int j = 0; j < i; j++) {
                 if (myData[j] > myData[j + 1]) {
                     swap(myData, j, j + 1);
-                    printChange(myData, j, j + 1);
+                    //                    printChange(myData, j, j + 1);
                 }
             }
         }
         return myData;
     }
+
 }
