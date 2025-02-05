@@ -15,7 +15,7 @@ import org.learn.cs.sort.impl.QuickSort;
  */
 public class SortRunner {
 
-    private int size = 100000;
+    private int size = 20;
     private int[] dataRandom = new int[size];
     private SortBase sortImpl;
 
@@ -29,16 +29,32 @@ public class SortRunner {
         sortImpl.init();
     }
 
-    //    @Test
+    @Test
     public void testR() {
-        System.out.println(Arrays.toString(sortImpl.sort(dataRandom)));
+        for (int j = 0; j < 100; j++) {
+            init();
+            System.out.println(Arrays.toString(dataRandom));
+            //                System.out.println(Arrays.toString(
+            sortImpl.sort(dataRandom);
+            //                ));
+        }
+
     }
 
-    @Test
+    //    @FindLostPoke
     public void testTime() {
         long start = System.nanoTime();
         sortImpl.sort(dataRandom);
         long end = System.nanoTime();
         System.out.println((end - start) / 1000000);
+    }
+
+//    @FindLostPoke
+    public void testError(){
+        int[] errorWithQSort=new int[]{
+                16, 338, 69, 11, 22, 291, 188, 208, 304, 278, 306, 278, 202, 291, 116, 11, 256, 82, 33, 385
+        };
+        sortImpl.sort(dataRandom);
+
     }
 }

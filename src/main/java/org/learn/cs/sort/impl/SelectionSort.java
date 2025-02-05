@@ -122,6 +122,7 @@ public class SelectionSort extends SortBase implements ISort {
         System.arraycopy(data, 0, myData, 0, data.length - 1);
 
         log.info(Arrays.toString(myData));
+        log.info("asdasdasd{},asdasd{}",1,2);
         for (int i = 0; i < myData.length; i++) {
             int minIdx = i;
             for (int j = i + 1; j < myData.length; j++) {
